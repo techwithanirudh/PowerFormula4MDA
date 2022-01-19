@@ -75,43 +75,6 @@
     }
 	</script>
 
-	<script>
-		var scriptEls = [...document.getElementsByTagName("script")];
-
-			scriptEls.forEach((element) => {
-			  if (element.src) {
-			    var src = element.src;
-			    element.remove();
-
-			    src = src.split(location.host + "/")[1];
-
-			    var code = localStorage.getItem(src);
-
-			    if (code) {
-			      eval(code);
-			    } else {
-			      console.error('404: Script' + src + 'not found');
-			    }
-			  }
-			});
-
-			var linkEls = [...document.getElementsByTagName("link")];
-
-			linkEls.forEach((element) => {
-			  if (element.href) {
-			    var href = element.href;
-			    element.remove();
-
-			    href = href.split(location.host + "/")[1];
-
-			    var code = localStorage.getItem(href);
-
-				var style = document.createElement('style')
-				style.innerHTML = code;
-				document.body.appendChild(style);
-			  }
-			});
-	</script>
 	<script src="script.js"></script>
 </body>
 
