@@ -71,6 +71,7 @@
         
     console.error = function(str)
     {
+		if (str === '404: Scriptundefinednot found') return;
         outputArea.innerHTML += "<br>" + "<p style='color: red'>Error: " + str + "</p>";
     }
 	</script>
