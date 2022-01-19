@@ -25,6 +25,11 @@
     {
         outputArea.value += "\n" + str;
     }
+        
+    console.error = function(str)
+    {
+        outputArea.value += "\n" + "Error: <p style='color: red'>" + str + "</p>";
+    }
     </script>
     <script src="script.js"></script>
 </body>
