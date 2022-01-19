@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Formula 4 MDA Playground</title>
+    <script src="https://raw.githubusercontent.com/techwithanirudh/PowerFormula4MDA/main/PowerFormula4MDA.js"></script>
+</head>
+
+<body>
+    <textarea id="output" disabled="disabled" rows="20" cols="20" style="display: inline-block; height: 100%; width: 100%"></textarea>
+    <script defer>
+    /**
+     *Trace
+    * @param {PageInput} PageInput Required Input about the page to navigate to. pageType: String. Specify "entityrecord","entitylist", "webresource".  entityName: String. The logical name of the table to load in the list control. data: (Optional) Object. A dictionary object that passes extra parameters to the form/web resource.
+    */
+    var outputArea = document.getElementById("output");
+    outputArea.value = 'Program output:\n=================';
+
+    console.log = function(str)
+    {
+        outputArea.value += "\n" + str;
+    }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
